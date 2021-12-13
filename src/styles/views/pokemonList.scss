@@ -1,0 +1,9 @@
+.pokemonLista {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.pokemonName {
+    text-transform: capitalize;
+}

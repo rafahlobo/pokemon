@@ -1,6 +1,4 @@
 import React from "react";
-
-
 export const initialState = {
     pokemons: [],
     pokemonsFiltered: [],
@@ -8,6 +6,4 @@ export const initialState = {
     pokemonSelected: null,
     modal: false,
 };
-
-
 export default React.createContext(null);

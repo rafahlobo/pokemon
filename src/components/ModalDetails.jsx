@@ -1,6 +1,7 @@
 import { Modal, Button, Icon, Image } from 'semantic-ui-react'
 import DataContext from "../data/dataContext"
 import { useContext } from "react"
+import placeholderImage from "../assets/placeholder_image.png"
 const ModalDetails = _ => {
     const { updateStateAsObj, state } = useContext(DataContext)
     const { modal, pokemonSelected } = state
@@ -10,10 +11,7 @@ const ModalDetails = _ => {
     const pokemonImage = pokemonSelected?.image
     const imageUrl = pokemonImage ?
         pokemonImage :
-        "https://react.semantic-ui.com/images/wireframe/image.png"
-
-
-
+        placeholderImage
     return (
         <Modal
             open={modal}

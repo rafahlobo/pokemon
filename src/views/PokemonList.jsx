@@ -14,12 +14,8 @@ const PokemonList = _ => {
                     <PokemonTable />
                 </Container>
             </div>
-
         </>
-
     )
-
-
 }
 
 export default PokemonList;

@@ -3,12 +3,7 @@ import { useContext } from "react"
 import DataContext from "../data/dataContext"
 import { getPokemonDetails } from '../data/gateway'
 import { filterPokemonByPhrase } from '../utils'
-import React from "react"
-
 import "../styles/components/pokemonTable.scss"
-
-
-
 
 const PokemonTable = _ => {
     const { state, updateStateAsObj } = useContext(DataContext)
@@ -24,7 +19,6 @@ const PokemonTable = _ => {
             })
 
     }
-    console.log("render table...")
     const pokemonFiltered = filterPokemonByPhrase(pokemons, searchField)
     const linesWithData = pokemonFiltered.map(pokemon => {
         return (
@@ -47,9 +41,6 @@ const PokemonTable = _ => {
         <Table.Row>
             <Table.Cell textAlign='center'>Sem Pokémons para capturar. :/</Table.Cell>
         </Table.Row>
-
-
-
     return (
         <div className="pokemonTable">
             <Table celled striped>
@@ -65,4 +56,4 @@ const PokemonTable = _ => {
     )
 }
 
-export default React.memo(PokemonTable)
+export default PokemonTable
